@@ -50,18 +50,7 @@ LINK_DIRECTORIES(
     ${LIBMSGPACK_LIBRARY_DIRS}
     ${LIBZMQ_LIBRARY_DIRS})
 
-SET(PLUGINS
-        blastbeat
-        cache
-        docker
-        chrono
-        ipvs
-        logstash
-        mongo
-        python
-        urlfetch
-        zeromq
-        elasticsearch)
+SET(PLUGINS ipvs)
 
 FOREACH(PLUGIN ${PLUGINS})
     ADD_SUBDIRECTORY(${PLUGIN})
